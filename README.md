@@ -23,7 +23,7 @@ The repository is organized by day/topic, with each directory containing practic
 
 ## Rustlings: Interactive Learning
 
-[Rustlings](https://github.com/rust-lang/rustlings/) is a collection of small, focused exercises designed to teach Rust through hands-on practice. It's an official Rust project that helps you learn by reading, writing, and fixing Rust code.
+[Rustlings](https://github.com/rust-lang/rustlings/) is a collection of small, focused exercises designed to teach Rust through hands-on practice. It's an official Rust project that helps you learn by reading, writing, and fixing Rust code. Small exercises to get you used to reading and writing Rust code - Recommended in parallel to reading the official Rust book. 📚️
 
 ### What is Rustlings?
 
