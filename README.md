@@ -8,10 +8,72 @@ The repository is organized by day/topic, with each directory containing practic
 
 ## Repository Structure
 
-- `day1/` - Hello World and basic project setup
-- `day2/` - Data types (primitive and compound)
-- `day3/` - Functions
-- _(Additional days will be added as learning progresses)_
+```
+rust-practice-2025/
+├── LICENSE
+├── README.md
+├── projects/              # Learning projects organized by topic
+│   ├── hello_world/       # Hello World and basic project setup
+│   ├── primitiveDataTypes/# Primitive data types (integers, floats, booleans, chars)
+│   ├── compoundDataTypes/ # Compound data types (tuples, arrays)
+│   └── functions/         # Functions, parameters, and return values
+└── rustlings/             # Interactive Rust exercises
+    ├── exercises/         # Progressive exercises covering all Rust concepts
+    └── solutions/         # Solution files for reference
+```
+
+## Installation & Setup
+
+### Installing Rust
+
+The recommended way to install Rust is through `rustup`, the official Rust toolchain installer.
+
+**On macOS, Linux, or Unix-like OS:**
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+**On Windows:**
+Download and run [rustup-init.exe](https://rustup.rs/)
+
+After installation, restart your terminal or run:
+```bash
+source $HOME/.cargo/env
+```
+
+**Verify installation:**
+```bash
+rustc --version
+cargo --version
+```
+
+### Updating Rust
+
+To update Rust to the latest stable version:
+```bash
+rustup update
+```
+
+### Additional Components
+
+Install useful Rust components:
+```bash
+# Rust formatter
+rustup component add rustfmt
+
+# Rust linter
+rustup component add clippy
+
+# Rust Language Server (for IDE support)
+rustup component add rust-analyzer
+```
+
+### Uninstalling Rust
+
+If you ever need to uninstall Rust:
+```bash
+rustup self uninstall
+```
 
 ## Learning Goals
 
@@ -110,12 +172,13 @@ Rustlings provides bite-sized exercises that start simple and gradually increase
 
 ## Progress Tracking
 
-| Day | Topic | Status |
-|-----|-------|--------|
-| Day 1 | Hello World, Project Setup | ✅ Complete |
-| Day 2 | Data Types | ✅ Complete |
-| Day 3 | Functions | ✅ Complete |
+| Project | Topic | Status |
+|---------|-------|--------|
+| hello_world | Hello World, Project Setup | ✅ Complete |
+| primitiveDataTypes | Primitive Data Types (integers, floats, booleans, chars) | ✅ Complete |
+| compoundDataTypes | Compound Data Types (tuples, arrays) | ✅ Complete |
+| functions | Functions, Parameters, Return Values | ✅ Complete |
 
 ---
 
-*Last updated: November 23, 2025*
+*Last updated: November 24, 2025*
