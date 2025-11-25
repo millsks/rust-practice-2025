@@ -1,3 +1,4 @@
+use std::cmp::Ordering;
 use rand::Rng;
 use std::io;
 use std::any::type_name;
@@ -34,13 +35,13 @@ fn main() {
             continue;
         }
 
-        if guess < secret_number {
-            println!("Too low! Try again.");
-        } else if guess > secret_number {
-            println!("Too high! Try again.");
-        } else {
-            println!("Congratulations! You guessed the correct number: {}", secret_number);
-            break;
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too low! Try again."),
+            Ordering::Greater => println!("Too high! Try again."),
+            Ordering::Equal => {
+                println!("Congratulations! You guessed the correct number: {}", secret_number);
+                break;
+            }
         }
     }
 }

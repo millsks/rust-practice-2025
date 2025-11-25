@@ -109,17 +109,21 @@ let guess: u32 = match guess.trim().parse() {
 - `Ok(num)` - successful parse, extract the number
 - `Err(_)` - parse failed, prompt again
 
-**Conditional Logic with `if/else if/else`**:
+**Conditional Logic with `match` and `Ordering`**:
 ```rust
-if guess < secret_number {
-    println!("Too low! Try again.");
-} else if guess > secret_number {
-    println!("Too high! Try again.");
-} else {
-    println!("Congratulations!");
-    break;  // Exit the loop
+use std::cmp::Ordering;
+
+match guess.cmp(&secret_number) {
+    Ordering::Less => println!("Too low! Try again."),
+    Ordering::Greater => println!("Too high! Try again."),
+    Ordering::Equal => {
+        println!("Congratulations! You guessed the correct number: {}", secret_number);
+        break;  // Exit the loop - without this, the game never ends!
+    }
 }
 ```
+- Uses `cmp()` method to compare two values, returning an `Ordering` enum
+- `break` is **essential** - without it, the infinite loop continues even after winning
 
 **Early Loop Continuation with `continue`**:
 - Used for input validation (invalid number or out of bounds)
